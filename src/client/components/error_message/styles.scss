@@ -1,0 +1,20 @@
+.error-messages {
+	list-style: none;
+  padding-left: 8px;
+  margin: 0 auto 16px;
+  max-width: 364px;
+  border: 1px #e62e00 solid;
+  border-radius: 5px;
+  padding: 12px;
+  background: #fff;
+}
+
+.error {
+	color: #e62e00;
+}
+
+:global {
+	.fa {
+		margin-right: 8px;
+	}
+}

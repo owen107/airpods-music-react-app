@@ -1,0 +1,34 @@
+$sm-width: 568px;
+$md-width: 768px;
+$lg-width: 1024px;
+$xl-width: 1280px;
+
+// Default styles should apply to viewport (0 - 567px)
+
+// Small: Styles applys to viewport (568px - 767px)
+@mixin sm {
+  @media screen and (min-width: #{$sm-width}) {
+    @content;
+  }
+}
+
+// Medium: Styles applys to viewport (768px - 1023px)
+@mixin md {
+  @media screen and (min-width: #{$md-width}) {
+    @content;
+  }
+}
+
+// Large: Styles applys to viewport (1023px - 1279px)
+@mixin lg {
+  @media screen and (min-width: #{$lg-width}) {
+    @content;
+  }
+}
+
+// Extra Large: Styles applys to viewport (>= 1280px)
+@mixin xl {
+  @media screen and (min-width: #{$xl-width}) {
+    @content;
+  }
+}

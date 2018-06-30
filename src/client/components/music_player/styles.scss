@@ -1,0 +1,171 @@
+$font-weight: 400 !default;
+$player-time-height: 1.6em !default;
+$player-time-color: #9b9b9b !default;
+$player-volume-height: 2px !default;
+$player-cover-width: 89px !default;
+$player-cover-height: $player-cover-width;
+
+@import '../../assets/global-styles/fonts.scss';
+@import '../../assets/global-styles/responsiveness.scss';
+
+:global {
+  * {
+    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,PingFang SC,Source Han Sans CN,Hiragino Sans GB,Microsoft YaHei,WenQuanYi Micro Hei,sans-serif;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  %row {
+    display: flex;
+  }
+
+  %col {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .hide {
+    display: none;
+  }
+
+  .icon {
+    cursor: pointer;
+  }
+
+  .player-container {
+    @extend %row;
+
+    .info-and-control {
+      display: inline-block;
+      width: 150px;
+      padding-left: 15px;
+      @extend %col;
+
+      .music-info {
+
+        .title, .artist {
+          font-weight: $font-weight;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          white-space: nowrap;
+        }
+
+        .title {
+          margin-bottom: 10px;
+          font-size: 14px;
+          font-family: $sfpro-thin;
+          letter-spacing: 0.07px;
+          color: #323c41;
+        }
+
+        .artist {
+          line-height: 2.5;
+          letter-spacing: 0.055px;
+          color: #323c41;
+          font-size: 11px;
+          font-family: $sfpro-regular;
+        }
+      }
+
+      .time-and-volume {
+        height: $player-time-height;
+        line-height: $player-time-height;
+        color: $player-time-color;
+        font-size: 0.8em;
+        margin-top: 6px;
+        @extend %row;
+
+        .left-time {
+          width: 3.2em;
+          margin-right: 10px;
+          text-align: left;
+          font-weight: $font-weight;
+        }
+
+        .volume-container {
+          @extend .hide;
+
+          .volume-icon i {
+            color: $player-time-color;
+          }
+
+          .volume-wrapper {
+            width: 50px;
+            padding-left: 2px;
+            opacity: 0;
+            transition: opacity .5s linear;
+
+            .progress-container {
+              height: $player-volume-height;
+              margin-top: calc(0.8em - 1px);
+              background-color: #e5e5e5;
+
+              .progress {
+                height: $player-volume-height;
+                background-color: $player-time-color;
+              }
+            }
+          }
+
+          &:hover .volume-wrapper {
+            opacity: 1;
+          }
+        }
+      }
+
+      .progress-container {
+        width: 100%;
+        height: 3px;
+        background-color: #dadada;
+        cursor: pointer;
+        position: relative;
+
+        .progress {
+          height: 100%;
+        }
+
+        .mode-control {
+          position: absolute;
+          right: -40px;
+          top: -8px;
+          @extend %row;
+        }
+      }
+    }
+
+    .cover-container {
+      width: $player-cover-width;
+      height: $player-cover-height;
+      overflow: hidden;
+
+      .cover {
+        width: $player-cover-width;
+        height: $player-cover-height;
+        background-size: contain;
+      }
+    }
+  }
+
+  .control-container {
+    margin-top: 1.3em;
+    font-size: 15px;
+    color: #323c41;
+
+    .controls {
+      width: 89px;
+      justify-content: space-around;
+      @extend %row;
+    }
+  }
+
+  @include md {
+    .player-container {
+
+      .info-and-control {
+        padding-left: 30px;
+        width: 290px;
+      }
+    }
+  }
+}

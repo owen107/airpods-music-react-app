@@ -1,0 +1,70 @@
+@import './fonts.scss';
+@import './responsiveness.scss';
+
+:global {
+  html, body {
+    font-size-adjust: 100%;
+    -webkit-font-size-adjust: 100%;
+    -moz-font-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  // remove default margins from body and titles
+  body, h1, h2, h3, h4, p, ul {
+    margin: 0;
+  }
+}
+
+:global .align-right {
+  text-align: right;
+}
+
+:global .align-center {
+  text-align: center;
+}
+
+:global .align-left {
+  text-align: left;
+}
+
+:global .clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+$font-path: '../fonts/SFPro';
+
+@font-face {
+  font-family: 'SFProDisplay-Thin';
+  src: url($font-path + '/thin/SFProDisplay-Thin.eot');
+  src: url($font-path +  '/thin/SFProDisplay-Thin.woff') format('woff'),
+       url($font-path + '/thin/SFProDisplay-Thin.ttf') format('truetype'),
+       url($font-path + '/thin/SFProDisplay-Thin.svg#SFProDisplay-Thin') format('svg'),
+       url($font-path + '/thin/SFProDisplay-Thin.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SFProDisplay-Light';
+  src: url($font-path + '/light/SFProDisplay-Light.eot');
+  src: url($font-path + '/light/SFProDisplay-Light.woff') format('woff'),
+       url($font-path + '/light/SFProDisplay-Light.ttf') format('truetype'),
+       url($font-path + '/light/SFProDisplay-Light.svg#SFProDisplay-Light') format('svg'),
+       url($font-path + '/light/SFProDisplay-Light.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SFProDisplay-Regular';
+  src: url($font-path + '/regular/SFProDisplay-Regular.eot');
+  src: url($font-path + '/regular/SFProDisplay-Regular.woff') format('woff'),
+       url($font-path + '/regular/SFProDisplay-Regular.ttf') format('truetype'),
+       url($font-path + '/regular/SFProDisplay-Regular.svg#SFProDisplay-Regular') format('svg'),
+       url($font-path + '/regular/SFProDisplay-Regular.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}

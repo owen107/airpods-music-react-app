@@ -1,0 +1,20 @@
+{
+	"presets": [
+    "es2015",
+    "react",
+    "stage-0"
+  ],
+	"plugins": [
+		["transform-class-properties", {
+			"spec": true
+		}],
+		["react-css-modules", {
+			"generateScopedName": "[name]__[local]___[hash:base64:6]",
+      "filetypes": {
+				".scss": {
+					"syntax": "postcss-scss"
+				}
+			}
+    }]
+	]
+}
