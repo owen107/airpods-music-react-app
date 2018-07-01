@@ -6,7 +6,7 @@ import { renderRoutes } from 'react-router-config';
 import { Provider } from 'react-redux';
 import Routes from './routes';
 import Helmet from 'react-helmet';
-import Root from './Root/root';
+import Root from './root/Root';
 import createStore from './store/createStore';
 import { isClient } from './shared/utils';
 import Meta from './components/meta/index';

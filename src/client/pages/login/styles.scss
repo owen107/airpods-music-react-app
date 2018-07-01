@@ -70,7 +70,7 @@
     cursor: pointer;
     outline: none;
 
-    &:hover {
+    &:hover, &:disabled {
       background-color: #4995ff;
     }
   }

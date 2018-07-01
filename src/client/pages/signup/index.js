@@ -86,7 +86,7 @@ class Signup extends Component {
                   className="submit-btn"
                   type="submit"
                   disabled={this.props.inProgress}>
-                  Sign up
+                  {this.props.inProgress ? 'Sign Up...' : 'Sign Up'}
                 </button>
               </form>
 

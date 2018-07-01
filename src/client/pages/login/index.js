@@ -74,7 +74,7 @@ class Login extends Component {
                   className="submit-btn"
                   type="submit"
                   disabled={this.props.inProgress}>
-                  Sign In
+                  {this.props.inProgress ? 'Sign In...' : 'Sign In'}
                 </button>
               </form>
 

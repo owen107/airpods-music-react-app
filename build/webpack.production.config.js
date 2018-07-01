@@ -180,6 +180,14 @@ const serverConfig = {
         }
       },
       {
+        test: /\.(woff|woff2|eot|ttf)(\?.*$|$)/,
+        loader: 'url-loader',
+        options: {
+          limit: 1,
+          name: '[name]-[hash].[ext]'
+        }
+      },
+      {
         test: /\.(jpg|png|gif|webp)$/,
         loader: 'url-loader',
         options: {
