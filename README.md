@@ -1,7 +1,7 @@
 # Airpods Music React/Redux SSR App
 This is a project for creating a simple futuristic Airpods Music application with React/Redux, ES6, Sass, Webpack and Express.
 
-##Technologies used
+## Technologies used
 
 - [React](http://facebook.github.io/react)
 - [Redux](https://redux.js.org/)

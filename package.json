@@ -1,5 +1,5 @@
 {
-  "name": "react-redux-ssr-app",
+  "name": "airpods-music-react-app",
   "version": "1.0.0",
   "description": "A simple react redux server sider rendering application",
   "main": "index.js",
@@ -9,6 +9,10 @@
     "clean": "rimraf ./dist/*",
     "start": "node ./src/server/server.prod.js",
     "deploy": "git push heroku master"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/owen107/airpods-music-react-app.git"
   },
   "author": "Jun Xu",
   "license": "ISC",
